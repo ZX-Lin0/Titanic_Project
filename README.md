@@ -1,2 +1,33 @@
-# Titanic_Project
-Titanic survival prediction using machine learning
+# Titanic 生存预测项目
+
+这是一个简单的机器学习的项目，用来预测泰坦尼克号乘客的生存情况。
+
+## 项目是什么？
+
+我用了一些乘客数据（比如舱位、性别、年龄、票价等），训练了一个模型，可以预测一个人能不能在沉船事故中活下来。
+主要功能用用乘客信息训练预测模型，可以在命令行里预测单个乘客，也可以用网页接口（API）来预测。
+
+## 怎么运行
+
+### 1.先安装需要的工具
+`pip install pandas scikit-learn flask joblib`
+
+### 2.训练模型
+
+`python train.py`
+这会生成一个 model.pkl文件，里面是训练好的模型。
+
+### 3.用命令行预测
+
+`python predict.py`
+输入乘客信息：3（三等舱），1（女性），25（年龄），0（家人数量），7.25（票价）
+程序输出是1（幸存）还是0（遇难）
+当然也可以调用API服务，但是目前还处于初学阶段，这个项目仅用来测试
+
+## 文件说明
+
+- train.py- 训练模型的代码
+- predict.py- 命令行预测工具
+- app.py- 网页API接口
+- data/- 存放数据的地方
+- model.pkl- 训练好的模型
